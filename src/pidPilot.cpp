@@ -79,7 +79,7 @@ std::vector<std::string> gate_names = {
 /*
 DO NOT MODIFY THESE TABLES - This data came from RL/GA trainer model
 */
-double fudgefactor[NUM_GATES] = { -100, 0, 50, -20, 0, -100 };
+double fudgefactor[NUM_GATES] = { -100, 0, 50, -20, 0, 60 };
 
 RATE_THRUST gate_looking_default[NUM_GATES] = {
   0, 0, 0, 0, // Gate10
@@ -672,7 +672,7 @@ void pilotUpdate(void) {
     if (gate_target == 3) thrust += 1.3;
     if (gate_sequence[gate_target] == 9) thrust += 0.3;
     if (gate_sequence[gate_target] == 23) thrust += 0.1;
-    if (gate_sequence[gate_target] == 6) thrust += 1.4;
+    if (gate_sequence[gate_target] == 6) thrust += 1;
     if (gate_target == 6) thrust += 0.5;
     if (gate_target == 7) thrust += 1;
     if (gate_target == 8) thrust += 0.6;
